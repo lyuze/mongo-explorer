@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
 
 /**
- * Created by Tom on 2018/9/7.
+ * @author liuyuze
  */
 public abstract class AbstractMongoConfig {
 

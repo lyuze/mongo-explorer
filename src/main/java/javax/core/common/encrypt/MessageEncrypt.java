@@ -4,7 +4,10 @@ import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
 
-public abstract class MessageEncrypt {		
+/**
+ * @author liuyuze
+ */
+public abstract class MessageEncrypt {
 	private static Map<String,MessageEncrypt>algorithm = new HashMap<String,MessageEncrypt>(); 
 	
 	protected final static int aid = 1;

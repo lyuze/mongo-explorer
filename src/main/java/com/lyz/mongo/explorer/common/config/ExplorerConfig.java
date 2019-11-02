@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * 加载自定义配置
- * @author tanyongde
+ * @author liuyuze
  *
  */
 @Component

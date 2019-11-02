@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.core.MongoTemplate;
 
 /**
- * Created by Tom on 2018/8/25.
+ * @author liuyuze
  */
 @Configuration
 @ConfigurationProperties(prefix = "spring.data.mongodb.depot")

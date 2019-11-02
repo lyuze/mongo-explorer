@@ -15,7 +15,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.stereotype.Repository;
 
 /**
- * Created by Tom on 2018/8/25.
+ * @author liuyuze
  */
 @Repository
 public class DepotRepository {
@@ -31,14 +31,14 @@ public class DepotRepository {
     public String putFile(OFile file,String alias) {
         try {
 
-            //根据hash值计算MD5的值，作为文件的唯一ID
-            //CRC32是根据文件流，是一种可逆算法
+            // 根据hash值计算MD5的值，作为文件的唯一ID
+            // CRC32是根据文件流，是一种可逆算法
             String id = file.getId();
             if(exists(id)){return  id;}
 
             String fileName = file.getName();
             GridFSInputFile gfs = getGridFS().createFile(file);
-            //分片的预案，设置到数据中
+            // 分片的预案，设置到数据中
             gfs.put("aliases", alias);
             gfs.put("filename", fileName);
             gfs.put("contentType", fileName.substring(fileName.lastIndexOf(".")));

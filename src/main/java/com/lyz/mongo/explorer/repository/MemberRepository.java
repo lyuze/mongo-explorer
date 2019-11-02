@@ -4,7 +4,7 @@ import com.lyz.mongo.explorer.entity.Member;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 /**
- * Created by Tom on 2018/8/23.
+ * @author liuyuze
  */
 public interface MemberRepository extends MongoRepository<Member, Long> {
 

@@ -19,7 +19,9 @@ public class DESStaticKey {
 	 */
 	public static String encrypt(String str, String key,String charset) {
 		try {
-			if(str == null || str.length() < 1) return "";
+			if(str == null || str.length() < 1) {
+				return "";
+			}
 			DESKeySpec keySpec = new DESKeySpec(key.getBytes());
 			SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES");
 			SecretKey secretKey = keyFactory.generateSecret(keySpec);

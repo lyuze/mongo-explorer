@@ -29,7 +29,7 @@ import java.util.zip.ZipOutputStream;
  * 提供各种对文件系统进行操作的工具. <br>
  * 在应用程序中，经常需要对文件系统进行操作，例如复制、移动、删除文件，查找文件的路径，对文件进行写操作等， 类FileUtils提供了与此相关的各种工具。
  * 
- * @author Tanyongde
+ * @author liuyuze
  */
 
 @SuppressWarnings("unchecked")

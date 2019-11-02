@@ -10,7 +10,7 @@ import javax.core.common.ResultMsg;
 
 /**
  * 文件访问和存储接口定义
- * @author Tanyongde
+ * @author liuyuze
  *
  */
 public interface IMemberService {

@@ -12,7 +12,7 @@ import reactor.core.publisher.Mono;
 import javax.core.common.ResultMsg;
 
 /**
- * Created by Tom on 2018/8/20.
+ * @author liuyuze
  */
 @RestController
 @RequestMapping("/system")
@@ -21,6 +21,15 @@ public class SystemController {
     @Autowired
     private MemberService memberService;
 
+    /**
+     * 登录
+     * @param loginName
+     * @param loginPass
+     * @param iframe
+     * @param callback
+     * @param jumpto
+     * @return
+     */
     @RequestMapping("/login.json")
     public ResponseEntity login(@RequestParam("loginName") String loginName,
                                 @RequestParam("loginPass") String loginPass,
@@ -61,7 +70,10 @@ public class SystemController {
         }
     }
 
-
+    /**
+     * 注销接口
+     * @return
+     */
     @GetMapping("/logout.json")
     public Mono<Object> logout(){
         ResultMsg<?> result = memberService.logout(null);

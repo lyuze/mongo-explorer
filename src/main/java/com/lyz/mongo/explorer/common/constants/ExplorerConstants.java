@@ -2,7 +2,7 @@ package com.lyz.mongo.explorer.common.constants;
 
 /**
  * 资源管理器常量定义
- * @author Tanyongde
+ * @author liuyuze
  *
  */
 public class ExplorerConstants {

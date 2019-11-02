@@ -10,21 +10,19 @@ public class CoverMessageEncrypt extends MessageEncrypt {
 
 	public static final String NAME="cover";
 
-	
 	private static long time;
 	static {
-		
-		Thread t = new Thread(new Runnable() {			
-			public void run() {
-				while(true){
-					time = System.currentTimeMillis()^0x863FA34;
-					try {
-						Thread.sleep(24*3600);//wait one day
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					}
+		Thread t = new Thread(() -> {
+			while(true){
+				time = System.currentTimeMillis()^0x863FA34;
+				try {
+					// wait one day
+					Thread.sleep(24*3600);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
 				}
 			}
+
 		});
 		t.setDaemon(true);
 		
@@ -32,6 +30,7 @@ public class CoverMessageEncrypt extends MessageEncrypt {
 		
 	}
 
+	@Override
 	public String decode(String input){
 		int nConLen = input.length();
 		byte []byKey = StringUtils.hex2Bytes(input.substring(nConLen - 16, nConLen));

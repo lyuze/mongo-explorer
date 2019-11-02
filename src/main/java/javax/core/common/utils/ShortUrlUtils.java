@@ -4,7 +4,7 @@ import java.security.MessageDigest;
 import java.util.Random;
 
 /**
- * Created by Tom on 2018/8/26.
+ * @author liuyuze
  */
 public class ShortUrlUtils {
 

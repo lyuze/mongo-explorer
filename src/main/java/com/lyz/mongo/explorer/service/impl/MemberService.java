@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import javax.core.common.ResultMsg;
 
 /**
- * Created by Tom on 2018/8/27.
+ * @author liuyuze
  */
 @Service
 public class MemberService implements IMemberService{

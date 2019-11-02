@@ -6,7 +6,7 @@ import java.util.Map;
 
 /**
  * 文件操作接口
- * @author Tanyongde
+ * @author liuyuze
  *
  */
 public interface IUFileService {

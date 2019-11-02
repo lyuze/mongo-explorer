@@ -24,15 +24,24 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by Tom on 2018/8/20.
+ * @author liuyuze
  */
 @RestController
 @RequestMapping("/web")
 public class ExplorerController {
 
+    /**
+     * 文件接口
+     */
     @Autowired
     private IUFileService uFileService;
 
+    /**
+     * 上传文件
+     * @param progressId
+     * @param callback
+     * @return
+     */
     @RequestMapping("/upload/progress.json")
     public ResponseEntity progress(@RequestParam("X-Progress-ID") String progressId,
                                  @RequestParam("callback") String callback){
@@ -55,6 +64,11 @@ public class ExplorerController {
 
     }
 
+    /**
+     * 预览文件
+     * @param id
+     * @return
+     */
     @GetMapping(value="/preview/{id:\\w+}.file")
     public ResponseEntity preview(@PathVariable(name="id") String id){
 
@@ -76,7 +90,11 @@ public class ExplorerController {
                 .body(new FileSystemResource(file));
     }
 
-
+    /**
+     * 下载文件
+     * @param id
+     * @return
+     */
     @RequestMapping("/download/{id:\\w+}.file")
     public ResponseEntity download(@PathVariable(name="id") String id){
 
@@ -106,8 +124,11 @@ public class ExplorerController {
                 .body(new FileSystemResource(file));
     }
 
-
-
+    /**
+     * 列表
+     * @param path
+     * @return
+     */
     @RequestMapping(value="/list.json")
     @ResponseBody
     public Mono<Object> list(@RequestParam(name="path") String path){
@@ -115,6 +136,12 @@ public class ExplorerController {
         return Mono.just(msg);
     }
 
+    /**
+     * 创建目录
+     * @param path
+     * @param name
+     * @return
+     */
     @RequestMapping(value="/createFolder.json")
     public Mono<Object> createFolder(@RequestParam("path") String path,@RequestParam("name") String name){
         ResultMsg<?> msg = uFileService.createFolder(ExplorerConstants.FILE_GROUP_USERS,ExplorerConstants.ANONYMOUS, path.replace("my:","") + "/" + name);
