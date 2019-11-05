@@ -20,6 +20,7 @@ public class ExplorerMongoConfig extends AbstractMongoConfig {
         return new MongoTemplate(mongoDbFactory());
     }
 
+    @Override
     @Primary
     @Bean(name = "mongoTemplate")
     public MongoTemplate getMongoTemplate() throws Exception {

@@ -14,6 +14,7 @@ public class DepotMongoConfig extends AbstractMongoConfig {
 
     public static final String MONGO_TEMPLATE = "depotMongoTemplate";
 
+    @Override
     @Bean(name = MONGO_TEMPLATE)
     public MongoTemplate getMongoTemplate() throws Exception {
         return new MongoTemplate(mongoDbFactory());
