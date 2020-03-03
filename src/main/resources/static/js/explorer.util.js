@@ -404,7 +404,7 @@ var ajax = function(options){
                              if (this.type != "dir") options.filesBody.append(createFileBody(this, self));
                          });
                      } else {
-                         options.filesBody.append('<div class="empty"><i class="fa fa-cloud"></i>该文件夹为空<p style="font-size:24px;margin-top:30px;text-align: center;">咕泡学院,只为更好的你</p></div>');
+                         options.filesBody.append('<div class="empty"><i class="fa fa-cloud"></i>该文件夹为空<p style="font-size:24px;margin-top:30px;text-align: center;">小泽工作室,只为更好的你</p></div>');
                      }
                      options.filesBody.append('<div style="clear:both"/>');
                  },
